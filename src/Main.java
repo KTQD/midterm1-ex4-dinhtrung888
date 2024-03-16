@@ -11,25 +11,9 @@ Thread sumThread = new Thread(new Runnable() {
                 }
                 System.out.println("Tổng của các phần tử trong mảng là: " + sum);
             }
-        });
+        }
 
-        // Tạo luồng tìm phần tử lớn nhất
-        Thread maxThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                int max = numbers[0];
-                for (int i = 1; i < numbers.length; i++) {
-                    if (numbers[i] > max) {
-                        max = numbers[i];
-                    }
-                }
-                System.out.println("Phần tử lớn nhất trong mảng là: " + max);
-            }
-        });
-
-        // Khởi chạy các luồng
-        sumThread.start();
-        maxThread.start(); 
+        
     
     }
 }
